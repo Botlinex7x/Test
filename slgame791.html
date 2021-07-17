@@ -1,0 +1,105 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
+  <title>My LIFF - LINE Front-end Framework</title>
+  </head>
+    <body>
+  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+  <script>
+    async function main() {
+      await liff.init({ liffId: "1656210142-MvNleRGy" })
+      if(!liff.isLoggedIn()){
+        liff.login()
+      }
+      await liff.shareTargetPicker([
+        {
+          "type": "flex",
+          "altText": "แจกเครดิตฟรี",
+          "contents": {
+  "type": "bubble",
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "image",
+            "url": "https://sv1.picz.in.th/images/2021/07/14/syT47a.jpg",
+            "size": "full",
+            "margin": "xxl",
+            "aspectRatio": "1:1",
+            "aspectMode": "fit"
+          }
+        ],
+        "borderColor": "#000000",
+        "borderWidth": "none",
+        "cornerRadius": "xxl"
+      }
+    ],
+    "backgroundColor": "#0048ff",
+    "background": {
+      "type": "linearGradient",
+      "angle": "0deg",
+      "startColor": "#0048ff",
+      "endColor": "#000000"
+    }
+  },
+  "footer": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "button",
+        "action": {
+          "type": "uri",
+          "label": "สมัครเลย",
+          "uri": "https://lin.ee/RhmfWZG"
+        },
+        "style": "primary",
+        "color": "#e500ff",
+        "offsetTop": "none",
+        "offsetStart": "none",
+        "offsetBottom": "none",
+        "height": "sm",
+        "adjustMode": "shrink-to-fit"
+      },
+      {
+        "type": "button",
+        "action": {
+          "type": "uri",
+          "label": "แชร์ให้เพื่อน",
+          "uri": "https://liff.line.me/1656210142-MvNleRGy"
+        },
+        "style": "primary",
+        "color": "#e500ff",
+        "margin": "md",
+        "height": "sm",
+        "adjustMode": "shrink-to-fit"
+      }
+    ],
+    "backgroundColor": "#FFCC00",
+    "margin": "none",
+    "spacing": "none",
+    "borderWidth": "none",
+    "borderColor": "#000000",
+    "cornerRadius": "none",
+    "background": {
+      "type": "linearGradient",
+      "angle": "0deg",
+      "startColor": "#000000",
+      "endColor": "#0048ff"
+    }
+  }
+}
+        }
+      ])
+  liff.closeWindow()
+    }
+    main()
+  </script>
+</body>
+</html>
